@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Annotation Results</h1>
+    <div>
+        <p>File Upload Status: Completed</p>
+        <ul>
+            {% for result in results %}
+                <li>
+                    <ul>
+                        {% for result in results %}
+                            <li>
+                                <h2>Annotated File: {{ result.filename }}</h2>
+                                <img src="{{ url_for('static', filename='results/' ~ result.filename) }}" alt="Annotated Image">
+                                <ul>
+                                    {% for detection in result.detections %}
+                                        <li>
+                                            {{ detection.label }} (ID: {{ detection.object_id }}) -
+                                            Time Spent: {{ detection.time_spent }} seconds
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                                <p>Total Objects Detected: {{ result.total_objects }}</p>
+                                <p>Total Unique IDs: {{ result.unique_ids }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
