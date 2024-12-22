@@ -7,18 +7,6 @@ Welcome to the Object Tracker project! This application leverages object trackin
 - **Visualize tracking results** including bounding boxes, centroids, and trails.
 - **Export the results** as a video and display it in an HTML window.
 
-## 📝 **Table of Contents**
-
-- [Project Overview](#project-overview)
-- [Core Features](#core-features)
-- [Tech Stack](#tech-stack)
-- [How to Run the Application](#how-to-run-the-application)
-- [Metrics Calculated](#metrics-calculated)
-- [Visualizations](#visualizations)
-- [Output Video](#output-video)
-- [Testing](#testing)
-
-
 ## 🎯 **Project Overview**
 
 This project is designed to automatically track and annotate objects in a given video using YOLO (You Only Look Once) object detection. The system tracks the objects, calculates various metrics, and outputs a processed video with bounding boxes, object trails and centroids displayed. Additionally, it saves the output video in a format suitable for web display.
@@ -62,8 +50,8 @@ This project is designed to automatically track and annotate objects in a given 
 
 3. **Setup the Environment**:
 
-   -Download the YOLO model weights (best.pt) and place them in the models/ directory.
-   -Ensure that your video files are placed in the uploads/ directory.
+- Download the YOLO model weights (best.pt) and place them in the models/ directory.
+- Ensure that your video files are placed in the uploads/ directory.
 
 4. **Run the Application**:
 
@@ -80,6 +68,7 @@ This project is designed to automatically track and annotate objects in a given 
 - **Total Time Each Object Spends**: The total time an object stays within the video frame is tracked and displayed.
 
 - **Total Unique Object IDs**: The number of distinct objects identified and tracked is displayed to show the diversity of objects detected.
+- 
 
 ##🎥 **Visualizations**
 
@@ -89,10 +78,12 @@ This project is designed to automatically track and annotate objects in a given 
 
 - **Object Trails**: Each object’s movement is visualized with a trail, showing the path it followed during the video.
 
+
 ##📹 **Output Video**
 
-- After the tracking and annotation process, the video is saved and stored in the **static/results/** directory.
+- After the tracking and annotation process, the video is saved and stored in the **runs/detect/track** directory.
 - The processed video can be displayed in a browser by navigating to the results page.
+
 
 ##🧪 **Testing**
 
